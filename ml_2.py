@@ -19,7 +19,8 @@ st.set_page_config(
 # 1. Load and preprocess data
 @st.cache_data
 def load_data():
-    return pd.read_excel("download.xlsx")
+    return pd.read_excel("datasheet.xlsx")
+
 
 df = load_data()
 
@@ -123,7 +124,7 @@ st.plotly_chart(fig_feat, use_container_width=True)
 
 st.header("2024 Forecasted Consumption Example")
 st.dataframe(forecast_2024.head(20))
-forecast_2024['tamper_prediction'] = forecast_2024['tamper_prediction'].astype(str)
+
 # --- Consumption Patterns Visualization ---
 st.header("📈 Consumption Patterns vs Tampering (2024)")
 fig = px.scatter(
