@@ -1,0 +1,208 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8fff8;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Bar */
+.dashboard-header-row {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0a2239;
+  padding: 12px 30px;
+  border-radius: 0 0 10px 10px;
+}
+
+.dashboard-title {
+  font-size: 2em;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* External Dashboard Button */
+:root {
+  --primary: #1e90ff;
+  --secondary: #3498db;
+  --shadow: #274690;
+  --bevel: #e3f0ff;
+}
+
+.redirect-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: linear-gradient(100deg, var(--primary) 0%, var(--secondary) 100%);
+  color: #fff;
+  font-size: 1em;
+  font-weight: 800;
+  border: 2px solid rgba(255,255,255,0.18);
+  border-radius: 12px;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+  margin-right: 10px;
+  box-shadow:
+    0 6px 0 0 var(--shadow),
+    0 12px 24px 0 rgba(60,60,70,0.12),
+    0 1px 0 0 var(--bevel) inset,
+    0 -3px 9px 0 rgba(255,255,255,0.08) inset;
+  transition:
+    background 0.22s,
+    box-shadow 0.22s,
+    transform 0.18s;
+  overflow: hidden;
+}
+.redirect-button:hover {
+  background: linear-gradient(100deg, var(--secondary) 0%, var(--primary) 100%);
+  box-shadow:
+    0 8px 0 0 var(--shadow),
+    0 16px 32px 0 rgba(60,60,70,0.14),
+    0 1px 0 0 var(--bevel) inset,
+    0 -4px 12px 0 rgba(255,255,255,0.10) inset;
+  color: #fff;
+  filter: brightness(1.07);
+}
+.redirect-button i {
+  font-size: 1em;
+  margin-right: 6px;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.18));
+}
+
+/* User Icon */
+.user-icon {
+  font-size: 2em;
+  color: #fff;
+  margin-left: 14px;
+}
+
+/* Filter Form */
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  justify-content: flex-start;
+  padding: 20px 30px 12px 30px;
+  background: #ffffff;
+  margin: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0;
+}
+
+.filter-group label {
+  color: #2c3e50;
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-right: 6px;
+  /* No colon for modern look */
+}
+
+.filter-group i {
+  color: #1e90ff;
+  font-size: 1.1em;
+}
+
+/* Inputs */
+select, input[type="text"] {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+  background: #f8f9fa;
+  font-size: 1em;
+  margin-right: 0;
+}
+
+/* Date input placeholder style */
+input[type="text"]::placeholder {
+  color: #aaa;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+
+/* Buttons: Unified style */
+.filter-btn, .reset-btn, .analysis-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  box-sizing: border-box;
+  font-weight: 600;
+  gap: 8px;
+}
+
+/* Unified color palette - blue for all actions */
+.filter-btn {
+  background: #1e90ff;
+  color: white;
+}
+.filter-btn:hover {
+  background: #2980b9;
+}
+
+.reset-btn {
+  background: #3498db;
+  color: white;
+  margin-left: 15px;
+}
+.reset-btn:hover {
+  background: #217dbb;
+}
+
+.analysis-btn {
+  background: #1e90ff;
+  color: #fff;
+  margin-left: 15px;
+}
+.analysis-btn:hover {
+  background: #0052cc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .dashboard-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding-top: 8px;
+  }
+  .filter-form {
+    flex-direction: column;
+    gap: 14px;
+    padding: 12px 8px;
+    margin: 10px 4px;
+  }
+  .filter-group {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .filter-btn, .reset-btn, .analysis-btn {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 8px;
+  }
+}
